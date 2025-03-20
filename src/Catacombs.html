@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation du projet</title>
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+  <style>
+    .no-container-img {
+      /* Ajoutez ici les styles que vous souhaitez appliquer à l'image */
+      width: 100%; /* w-full */
+      border-radius: 0.5rem; /* rounded-lg */
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+      margin-bottom: 1.5rem; /* mb-6 */
+      transform: scale(1.05); /* transform scale-105 */
+    }
+  </style>
+</head>
+<body class="bg-blanc-casse font-sans">
+
+<div class="containers mx-auto p-8 max-w-2xl">
+
+  <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Catacombs</h1>
+
+  <div class="flex justify-center space-x-4">
+    <img src="../Ecran-d-acceuil-catacombs.png" alt="Image du projet 1" class="no-container-img">
+    <img src="../Ecran-de-jeu-catacombs.png" alt="Image du projet 2" class="no-container-img">
+  </div>
+
+  <div class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Description du projet</h2>
+    <p class="text-gray-600 leading-relaxed">
+      Catacombs est un jeu de type "roguelike" qui a été réalisé grâce à la méthodologie Agile, en utilisant la méthode Scrum.
+        Dans ce jeu le joueur incarne un aventurier qui doit explorer des catacombes pour trouver un trésor.
+      Le joueur doit se frayer un chemin à travers les catacombes, combattre des monstres et amasser le plus de points possibles.
+      Au fur et à mesure de sa progression, le joueur peut trouver des armes et des objets qui lui permettent d'améliorer ses statistiques, ses compétences et de se soigner.
+      Mais plus le joueur avance, plus les monstres deviennent puissants.
+      Le joueur peut également défier ses camarades en essayant de battre leur score.
+    </p>
+
+    <div class="mt-6">
+      <h3 class="text-lg font-semibold text-gray-700 mb-2">Composants clés</h3>
+      <ul class="list-disc list-inside text-gray-600">
+        <li>Méthodologie Agile</li>
+        <li>Importation/exportation de données dans un CSV</li>
+        <li>Affichage dans une console Unix</li>
+      </ul>
+    </div>
+
+    <div class="mt-6">
+      <h3 class="text-lg font-semibold text-gray-700 mb-2">Technologies utilisées</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Java</span>
+        <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">SCRUM</span>
+      </div>
+    </div>
+
+    <div class="mt-6 flex items-center">
+      <a href="https://gitlab.univ-lille.fr/2024-projet-agile-de-rentree/groupe-3" class="flex items-center text-blue-500 hover:underline">
+        <img src="../GitLabLogo.svg" alt="GitLab Logo" class="w-6 h-6 mr-2">
+        Voir le dépôt GitLab
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
