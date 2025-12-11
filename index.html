@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>Portfolio - Alexandre</title>
+</head>
+<body>
+    <!-- Barre de progression de scroll -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-lavande-primaire to-lavande-primaire/70 w-0 z-50 transition-all duration-300"></div>
+
+<header id="header-nav" class="fixed top-0 left-0 w-full z-20 transition duration-300 bg-blanc-propre shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            
+            <div class="flex-shrink-0">
+                <a href="#" class="text-2xl font-bold text-gris-fonce-texte hover:text-lavande-primaire transition duration-200">
+                    Alexandre Dalaroy
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex items-center" aria-label="Menu principal">
+                <ul class="flex space-x-6">
+                    <li>
+                        <a href="#accueil" data-nav="accueil" class="nav-link text-gris-fonce-texte hover:text-lavande-primaire py-1 transition duration-200 relative">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#formation" data-nav="formation" class="nav-link text-gris-fonce-texte hover:text-lavande-primaire py-1 transition duration-200 relative">Formation</a>
+                    </li>
+                    <li>
+                        <a href="#experiences" data-nav="experiences" class="nav-link text-gris-fonce-texte hover:text-lavande-primaire py-1 transition duration-200 relative">Expériences</a>
+                    </li>
+                    <li>
+                        <a href="#projets" data-nav="projets" class="nav-link text-gris-fonce-texte hover:text-lavande-primaire py-1 transition duration-200 relative">Projets</a>
+                    </li>
+                    <li>
+                        <a href="#competences" data-nav="competences" class="nav-link text-gris-fonce-texte hover:text-lavande-primaire py-1 transition duration-200 relative">Compétences</a>
+                    </li>
+                    <li>
+                        <a href="#centreInteret" data-nav="centreInteret" class="nav-link text-gris-fonce-texte hover:text-lavande-primaire py-1 transition duration-200 relative">Centres d'intérets</a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-nav="contact" class="nav-link text-gris-fonce-texte hover:text-lavande-primaire py-1 transition duration-200 relative">Contact</a>
+                    </li>
+                </ul>
+                <button id="dark-mode-toggle" class="ml-6 p-2 text-gris-fonce-texte hover:text-lavande-primaire transition duration-200" aria-label="Basculer le mode sombre">
+                    <svg id="sun-icon" class="w-5 h-5 hidden" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="4" fill="currentColor"/><line x1="10" y1="1" x2="10" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="17" x2="10" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="10" x2="3" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="17" y1="10" x2="19" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="3" x2="4.5" y2="4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="15.5" y1="15.5" x2="17" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="17" y1="3" x2="15.5" y2="4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4.5" y1="15.5" x2="3" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <svg id="moon-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                </button>
+            </nav>
+            
+            <div class="md:hidden flex items-center gap-4">
+                <button id="dark-mode-toggle-mobile" class="p-2 text-gris-fonce-texte hover:text-lavande-primaire transition duration-200" aria-label="Basculer le mode sombre">
+                    <svg id="sun-icon-mobile" class="w-5 h-5 hidden" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="4" fill="currentColor"/><line x1="10" y1="1" x2="10" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="17" x2="10" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="10" x2="3" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="17" y1="10" x2="19" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="3" x2="4.5" y2="4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="15.5" y1="15.5" x2="17" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="17" y1="3" x2="15.5" y2="4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="4.5" y1="15.5" x2="3" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <svg id="moon-icon-mobile" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                </button>
+                <button type="button" class="text-gris-fonce-texte hover:text-lavande-primaire focus:outline-none" aria-label="Ouvrir le menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</header>
+<div class="h-[72px]"></div>
+<body>
+    <section id="accueil" class="py-16 md:py-24 bg-blanc-propre">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="md:w-3/5 order-2 md:order-1 text-center md:text-left">
+                    
+                    <p class="text-xl font-medium text-lavande-primaire mb-2">Bonjour, je m'appelle</p>
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gris-fonce-texte mb-6">
+                        Alexandre Dalaroy
+                    </h1>
+                                        <div class="h-12 mb-6">
+                        <p class="text-2xl font-bold text-lavande-primaire" id="typed-text"></p>
+                    </div>
+                                        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto md:mx-0">
+                        Actuellement étudiant en 3ème année de Bachelor Universitaire de Technologie (BUT) en Informatique à l’IUT de Lille. Passionné par le développement logiciel, les Sciences des Données et les Intelligences Artificielles, je cherche à améliorer mes compétences techniques et à gagner en expérience professionnelle. À travers mon parcours académique et les projets auxquels j'ai pris part, j'ai acquis des compétences solides en programmation (Java/JEE, JavaScript et Python) et en gestion de bases de données.
+                    </p>
+                    
+                    <div class="flex gap-4 mt-4">
+                        <a href="./dist/assets/cv/CV Dev Alexandre Dalaroy.pdf" download 
+                        class="inline-block px-8 py-3 text-white font-semibold rounded-lg 
+                                bg-lavande-primaire hover:bg-lavande-primaire/80 
+                                transition duration-300 shadow-lg hover:shadow-xl">
+                            Télécharger CV Dev
+                        </a>
+                        <a href="./dist/assets/cv/CV DataScience Alexandre Dalaroy.pdf" download 
+                        class="inline-block px-8 py-3 text-white font-semibold rounded-lg 
+                                bg-lavande-primaire hover:bg-lavande-primaire/80 
+                                transition duration-300 shadow-lg hover:shadow-xl">
+                            Télécharger CV Data Science
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:w-2/5 order-1 md:order-2 flex justify-center">
+                    <img src="./dist/assets/images/a0448bf1-d3bf-4166-813d-6f713eb94221.jpg" alt="Portrait d'Alexandre Dalaroy" 
+                        class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full 
+                                border-4 border-lavande-primaire shadow-2xl">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="formation" class="py-16 md:py-24 bg-blanc-propre">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-4xl font-extrabold text-center text-gris-fonce-texte mb-16 reveal">
+                Mon Parcours Académique
+            </h2>
+
+            <ol class="relative border-l border-gris-clair-bordure dark:border-gray-200">
+                
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-lavande-primaire rounded-full -left-3 ring-8 ring-blanc-propre">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    </span>
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-lavande-primaire hover:shadow-xl transition duration-300">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gris-fonce-texte mb-1">
+                                    BUT Informatique
+                                </h3>
+                                <p class="text-lavande-primaire font-semibold text-sm">IUT A - Université de Lille</p>
+                            </div>
+                            <span class="bg-lavande-primaire text-white text-xs font-semibold px-3 py-1 rounded-full">Actuel</span>
+                        </div>
+                        
+                        <time class="block mb-3 text-sm font-medium text-gray-500 flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                            2023 - Maintenant
+                        </time>
+                        
+                        <p class="text-base text-gray-700 leading-relaxed">
+                            Bachelor Universitaire de Technologie sur 3 ans, formation complète en développement logiciel, réseaux, bases de données et gestion de projets informatiques.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-lavande-primaire rounded-full -left-3 ring-8 ring-blanc-propre">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><text x="10" y="15" font-size="16" font-weight="bold" text-anchor="middle" fill="white">E</text></svg>
+                    </span>
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-lavande-primaire hover:shadow-xl transition duration-300">
+                        <div class="mb-3">
+                            <h3 class="text-2xl font-bold text-gris-fonce-texte mb-1">
+                                Classe Préparatoire Intégrée
+                            </h3>
+                            <p class="text-lavande-primaire font-semibold text-sm">EPITA - Kremlin-Bicêtre</p>
+                        </div>
+                        
+                        <time class="block mb-3 text-sm font-medium text-gray-500 flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                            2022 - 2023
+                        </time>
+                        
+                        <p class="text-base text-gray-700 leading-relaxed">
+                            Première année de prépa intégrée en école d'ingénieur, focus sur les mathématiques, l'algorithmique et les fondamentaux de l'informatique.
+                        </p>
+                    </div>
+                </li>
+                
+                <li class="ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-lavande-primaire rounded-full -left-3 ring-8 ring-blanc-propre">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/><path d="M20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                    </span>
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-lavande-primaire hover:shadow-xl transition duration-300">
+                        <div class="mb-3">
+                            <h3 class="text-2xl font-bold text-gris-fonce-texte mb-1">
+                                Baccalauréat Général
+                            </h3>
+                            <p class="text-lavande-primaire font-semibold text-sm">Lycée Léonard de Vinci - Levallois-Perret</p>
+                        </div>
+                        
+                        <time class="block mb-3 text-sm font-medium text-gray-500 flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                            2019 - 2022
+                        </time>
+                        
+                        <p class="text-base text-gray-700 leading-relaxed">
+                            <span class="font-semibold text-gris-fonce-texte">Spécialités :</span> Mathématiques & NSI (Numérique et Sciences Informatiques)
+                            <br>
+                            <span class="inline-block mt-2 px-3 py-1 bg-lavande-primaire/10 text-lavande-primaire rounded-full text-sm font-medium">Mention Bien</span>
+                        </p>
+                    </div>
+                </li>
+                
+            </ol>
+        </div>
+    </section>
+
+    <!-- SECTION EXPERIENCES DE STAGE -->
+    <section id="experiences" class="py-16 md:py-24 bg-blanc-propre">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-4xl font-extrabold text-center text-gris-fonce-texte mb-16 reveal">
+                Expériences de Stage
+            </h2>
+
+            <ol class="relative border-l border-gris-clair-bordure">
+                
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-lavande-primaire rounded-full -left-3 ring-8 ring-blanc-propre">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    </span>
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-lavande-primaire hover:shadow-xl transition duration-300">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gris-fonce-texte mb-1">
+                                    Stage en Motion Capture
+                                </h3>
+                                <p class="text-lavande-primaire font-semibold text-sm">NTNU - Trondheim, Norvège</p>
+                            </div>
+                            <span class="bg-lavande-primaire text-white text-xs font-semibold px-3 py-1 rounded-full">Stage</span>
+                        </div>
+                        
+                        <time class="block mb-4 text-sm font-medium text-gray-500 flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                            Avril 2025 - Juin 2025
+                        </time>
+                        
+                        <p class="text-base text-gray-700 leading-relaxed mb-4">
+                            <span class="font-semibold text-gris-fonce-texte">Développement d'un logiciel de surveillance et d'analyse des mouvements (Motion Capture)</span>
+                        </p>
+
+                        <ul class="space-y-3 ml-4">
+                            <li class="text-gray-700 flex items-start">
+                                <span class="text-lavande-primaire font-bold mr-3">•</span>
+                                <span><span class="font-semibold">Optimisation des performances</span> des systèmes embarqués grâce à la programmation en langage C++</span>
+                            </li>
+                            <li class="text-gray-700 flex items-start">
+                                <span class="text-lavande-primaire font-bold mr-3">•</span>
+                                <span><span class="font-semibold">Conduite des tests techniques</span> afin de vérifier le bon fonctionnement des programmes, mise en œuvre des actions correctives</span>
+                            </li>
+                            <li class="text-gray-700 flex items-start">
+                                <span class="text-lavande-primaire font-bold mr-3">•</span>
+                                <span><span class="font-semibold">Support technique</span> impliquant le traitement d'anomalies remontées par les utilisateurs</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-3 py-1 rounded-full">C++</span>
+                            <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-3 py-1 rounded-full">Systèmes Embarqués</span>
+                            <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-3 py-1 rounded-full">Tests</span>
+                        </div>
+                    </div>
+                </li>
+                
+            </ol>
+        </div>
+    </section>
+
+    <!-- SECTION STATISTIQUES -->
+    <section id="stats" class="py-16 md:py-24 bg-gradient-to-r from-lavande-primaire/10 to-lavande-primaire/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-4xl font-extrabold text-center text-gris-fonce-texte mb-16 reveal">
+                Aperçu en Chiffres
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Projets -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center border border-gris-clair-bordure hover:shadow-2xl transition duration-300 counter-card" data-target="5">
+                    <div class="text-5xl font-extrabold text-lavande-primaire mb-3">
+                        <span class="counter">0</span><span>+</span>
+                    </div>
+                    <p class="text-xl font-semibold text-gris-fonce-texte">Projets Réalisés</p>
+                    <p class="text-sm text-gray-600 mt-2">Développements variés</p>
+                </div>
+
+                <!-- Compétences -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center border border-gris-clair-bordure hover:shadow-2xl transition duration-300 counter-card" data-target="15">
+                    <div class="text-5xl font-extrabold text-lavande-primaire mb-3">
+                        <span class="counter">0</span><span>+</span>
+                    </div>
+                    <p class="text-xl font-semibold text-gris-fonce-texte">Compétences Maîtrisées</p>
+                    <p class="text-sm text-gray-600 mt-2">Langages & Frameworks</p>
+                </div>
+
+                <!-- Années d'expérience -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center border border-gris-clair-bordure hover:shadow-2xl transition duration-300 counter-card" data-target="3">
+                    <div class="text-5xl font-extrabold text-lavande-primaire mb-3">
+                        <span class="counter">0</span><span>+</span>
+                    </div>
+                    <p class="text-xl font-semibold text-gris-fonce-texte">Années d'Études</p>
+                    <p class="text-sm text-gray-600 mt-2">En Informatique</p>
+                </div>
+
+                <!-- Certifications -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center border border-gris-clair-bordure hover:shadow-2xl transition duration-300 counter-card" data-target="2">
+                    <div class="text-5xl font-extrabold text-lavande-primaire mb-3">
+                        <span class="counter">0</span><span>+</span>
+                    </div>
+                    <p class="text-xl font-semibold text-gris-fonce-texte">Certifications</p>
+                    <p class="text-sm text-gray-600 mt-2">Cambridge & Divers</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="py-16 md:py-24 bg-blanc-propre">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+<h2 class="text-4xl font-extrabold text-center text-gris-fonce-texte mb-16 reveal">
+                Projets Réalisés
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gris-clair-bordure flex flex-col" style="perspective: 1000px;">
+                    
+                    <div class="flex items-center space-x-4 mb-4">
+                        <svg class="w-8 h-8 text-lavande-primaire flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 4v-4H4a2 2 0 01-2-2V5zm15 7a1 1 0 011 1v4a1 1 0 01-1 1h-2v2l-3-2h-3a1 1 0 01-1-1v-4a1 1 0 011-1h6z"></path></svg>
+                        <h3 class="text-xl font-semibold text-gris-fonce-texte">CampusTalk</h3>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4 flex-grow">
+                        Premier projet d'application Web utilisant JEE, nous avons eu pour but de créer une sorte de réseau social à l'image de WhatsApp ou Instagram (la partie messagerie) avec des discussions entre différents utilisateurs.
+                    </p>
+
+                    <div class="mb-4 space-x-2">
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">JEE</span>
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">JSP/Servlet</span>
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">Tomcat</span>
+                    </div>
+                    
+                    <div class="mt-auto flex justify-start space-x-4">
+                        <a href="https://gitlab.univ-lille.fr/alexandre.dalaroy.etu/campustalk" target="_blank" 
+                        class="text-lavande-primaire font-medium hover:text-gray-700 transition duration-200 flex items-center">
+                            <img src="./dist/assets/images/GitLabLogo.svg" alt="GitLab" class="w-5 h-5 mr-1" />
+                            Code Source
+                        </a>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gris-clair-bordure flex flex-col" style="perspective: 1000px;">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <svg class="w-8 h-8 text-lavande-primaire flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="1.5"/><circle cx="12" cy="8" r="1.5"/><circle cx="18" cy="6" r="1.5"/><circle cx="7" cy="13" r="1.5"/><circle cx="14" cy="11" r="1.5"/><circle cx="20" cy="14" r="1.5"/><circle cx="9" cy="18" r="1.5"/><circle cx="16" cy="17" r="1.5"/><circle cx="4" cy="20" r="1.5"/><line x1="2" y1="22" x2="22" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2" y1="2" x2="2" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <h3 class="text-xl font-semibold text-gris-fonce-texte">Classification de données</h3>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4 flex-grow">
+                        L'objectif de cette application est d'afficher des données venant d'un fichier CSV sur un graphique nuage de points et de pouvoir créer une nouvelle donnée et la classifier en utilisant l'algorithme des K-Nearest Neighbours. Réalisée en Java.
+                    </p>
+
+                    <div class="mb-4 space-x-2">
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">Java</span>
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">K-NN</span>
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">JavaFX</span>
+                    </div>
+                    
+                    <div class="mt-auto flex justify-start space-x-4">
+                        <a href="https://gitlab.univ-lille.fr/alexandre.dalaroy.etu/classification-de-donnees" target="_blank" 
+                        class="text-lavande-primaire font-medium hover:text-gray-700 transition duration-200 flex items-center">
+                            <img src="./dist/assets/images/GitLabLogo.svg" alt="GitLab" class="w-5 h-5 mr-1" />
+                            Code Source
+                        </a>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gris-clair-bordure flex flex-col" style="perspective: 1000px;">
+                    
+                    <div class="flex items-center space-x-4 mb-4">
+                        <svg class="w-8 h-8 text-lavande-primaire flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h3v3H6V6zm5 0h3v3h-3V6zm5 0h3v3h-3V6zM6 11h3v3H6v-3zm5 0h3v3h-3v-3zm5 0h3v3h-3v-3zM6 16h3v3H6v-3zm5 0h3v3h-3v-3zm5 0h3v3h-3v-3z"/></svg>
+                        <h3 class="text-xl font-semibold text-gris-fonce-texte">Jeu Rogue-Like ASCII</h3>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4 flex-grow">
+                        Pour ce premier projet de 2ème année de BUT, nous avons développé un jeu vidéo rogue-like en Java qui se joue intégralement dans un terminal Linux. Nous avons utilisé la méthode Agile de développement, plus particulièrement la méthodologie SCRUM en petites équipes de 4 étudiants.
+                    </p>
+
+                    <div class="mb-4 space-x-2">
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">Java</span>
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">SCRUM</span>
+                        <span class="inline-block bg-lavande-primaire/10 text-lavande-primaire text-xs font-medium px-2.5 py-0.5 rounded-full">Terminal/ASCII</span>
+                    </div>
+                    
+                    <div class="mt-auto flex justify-start space-x-4">
+                        <a href="https://gitlab.univ-lille.fr/2024-projet-agile-de-rentree/groupe-3" target="_blank" 
+                        class="text-lavande-primaire font-medium hover:text-gray-700 transition duration-200 flex items-center">
+                            <img src="./dist/assets/images/GitLabLogo.svg" alt="GitLab" class="w-5 h-5 mr-1" />
+                            Code Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="py-16 md:py-24 bg-blanc-propre">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-4xl font-extrabold text-center text-gris-fonce-texte mb-16 reveal">
+                Compétences Techniques & Linguistiques
+            </h2>
+
+            <div class="space-y-10">
+                
+                <!-- Langages -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-gris-fonce-texte mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-lavande-primaire rounded-full mr-3"></span>
+                        Langages de Programmation
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2.5 bg-lavande-primaire text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/90 transition duration-200">Java</span>
+                        <span class="px-5 py-2.5 bg-lavande-primaire text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/90 transition duration-200">Python</span>
+                        <span class="px-5 py-2.5 bg-lavande-primaire/80 text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/90 transition duration-200">JavaScript</span>
+                        <span class="px-5 py-2.5 bg-lavande-primaire/80 text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/90 transition duration-200">SQL</span>
+                        <span class="px-5 py-2.5 bg-lavande-primaire/60 text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/70 transition duration-200">C</span>
+                        <span class="px-5 py-2.5 bg-lavande-primaire/80 text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/90 transition duration-200">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Technologies -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-gris-fonce-texte mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-lavande-primaire rounded-full mr-3"></span>
+                        Frameworks & Technologies
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2.5 bg-gris-fonce-texte text-white font-medium rounded-full text-sm hover:bg-gris-fonce-texte/90 transition duration-200">Spring Boot</span>
+                        <span class="px-5 py-2.5 bg-gris-fonce-texte text-white font-medium rounded-full text-sm hover:bg-gris-fonce-texte/90 transition duration-200">React</span>
+                        <span class="px-5 py-2.5 bg-gris-fonce-texte text-white font-medium rounded-full text-sm hover:bg-gris-fonce-texte/90 transition duration-200">Java EE</span>
+                        <span class="px-5 py-2.5 bg-gris-fonce-texte/80 text-white font-medium rounded-full text-sm hover:bg-gris-fonce-texte/90 transition duration-200">JPA/Hibernate</span>
+                        <span class="px-5 py-2.5 bg-gris-fonce-texte/80 text-white font-medium rounded-full text-sm hover:bg-gris-fonce-texte/90 transition duration-200">Tailwind CSS</span>
+                        <span class="px-5 py-2.5 bg-gris-fonce-texte/80 text-white font-medium rounded-full text-sm hover:bg-gris-fonce-texte/90 transition duration-200">Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- Bases de Données -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-gris-fonce-texte mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-lavande-primaire rounded-full mr-3"></span>
+                        Bases de Données
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2.5 bg-lavande-primaire/70 text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/80 transition duration-200">PostgreSQL</span>
+                        <span class="px-5 py-2.5 bg-lavande-primaire/70 text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/80 transition duration-200">MongoDB</span>
+                        <span class="px-5 py-2.5 bg-lavande-primaire/50 text-white font-medium rounded-full text-sm hover:bg-lavande-primaire/60 transition duration-200">MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Langues -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-gris-fonce-texte mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-lavande-primaire rounded-full mr-3"></span>
+                        Langues
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                            <span class="font-semibold text-gris-fonce-texte">Français</span>
+                            <span class="text-sm text-gray-600">Natif</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                            <span class="font-semibold text-gris-fonce-texte">Anglais</span>
+                            <span class="px-3 py-1 bg-lavande-primaire text-white text-xs font-semibold rounded-full">C1 Cambridge</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Méthodologies -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-gris-fonce-texte mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-lavande-primaire rounded-full mr-3"></span>
+                        Méthodologies & Outils
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-100 text-gris-fonce-texte font-medium rounded-lg text-sm border border-gris-clair-bordure">SCRUM</span>
+                        <span class="px-4 py-2 bg-gray-100 text-gris-fonce-texte font-medium rounded-lg text-sm border border-gris-clair-bordure">Agile</span>
+                        <span class="px-4 py-2 bg-gray-100 text-gris-fonce-texte font-medium rounded-lg text-sm border border-gris-clair-bordure">Git</span>
+                        <span class="px-4 py-2 bg-gray-100 text-gris-fonce-texte font-medium rounded-lg text-sm border border-gris-clair-bordure">Docker</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="centreInteret" class="py-16 md:py-24 bg-blanc-propre">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-4xl font-extrabold text-center text-gris-fonce-texte mb-16 reveal">
+                Centres d'Intérêts
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Jeux Vidéos -->
+                <div class="group relative overflow-hidden" style="perspective: 1000px;">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-lavande-primaire to-lavande-primaire/50"></div>
+                    <div class="pl-8 pr-6 py-6 hover:translate-x-2 transition-transform duration-300">
+                        <div class="flex items-baseline gap-4 mb-3">
+                            <span class="text-5xl font-bold text-lavande-primaire/20">01</span>
+                            <h3 class="text-2xl font-bold text-gris-fonce-texte">Jeux Vidéos</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-3 pl-20">
+                            Passionné par les univers virtuels, des jeux de stratégie aux RPGs immersifs. Les compétitions en ligne développent esprit d'équipe et réactivité.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pl-20">
+                            <span class="text-xs text-lavande-primaire font-medium">Stratégie</span>
+                            <span class="text-xs text-gray-400">•</span>
+                            <span class="text-xs text-lavande-primaire font-medium">RPG</span>
+                            <span class="text-xs text-gray-400">•</span>
+                            <span class="text-xs text-lavande-primaire font-medium">Compétition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Musique -->
+                <div class="group relative overflow-hidden" style="perspective: 1000px;">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-lavande-primaire to-lavande-primaire/50"></div>
+                    <div class="pl-8 pr-6 py-6 hover:translate-x-2 transition-transform duration-300">
+                        <div class="flex items-baseline gap-4 mb-3">
+                            <span class="text-5xl font-bold text-lavande-primaire/20">02</span>
+                            <h3 class="text-2xl font-bold text-gris-fonce-texte">Musique</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-3 pl-20">
+                            Exploration de nouveaux genres musicaux et pratique instrumentale. La musique est un moyen d'expression créative et de relaxation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pl-20">
+                            <span class="text-xs text-lavande-primaire font-medium">Découverte</span>
+                            <span class="text-xs text-gray-400">•</span>
+                            <span class="text-xs text-lavande-primaire font-medium">Pratique</span>
+                            <span class="text-xs text-gray-400">•</span>
+                            <span class="text-xs text-lavande-primaire font-medium">Écoute Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arts Martiaux -->
+                <div class="group relative overflow-hidden" style="perspective: 1000px;">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-lavande-primaire to-lavande-primaire/50"></div>
+                    <div class="pl-8 pr-6 py-6 hover:translate-x-2 transition-transform duration-300">
+                        <div class="flex items-baseline gap-4 mb-3">
+                            <span class="text-5xl font-bold text-lavande-primaire/20">03</span>
+                            <h3 class="text-2xl font-bold text-gris-fonce-texte">Arts Martiaux</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-3 pl-20">
+                            Pratique régulière qui cultive discipline mentale et physique. Apporte concentration, maîtrise de soi et dépassement personnel.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pl-20">
+                            <span class="text-xs text-lavande-primaire font-medium">Discipline</span>
+                            <span class="text-xs text-gray-400">•</span>
+                            <span class="text-xs text-lavande-primaire font-medium">Concentration</span>
+                            <span class="text-xs text-gray-400">•</span>
+                            <span class="text-xs text-lavande-primaire font-medium">Physique</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volleyball -->
+                <div class="group relative overflow-hidden" style="perspective: 1000px;">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-lavande-primaire to-lavande-primaire/50"></div>
+                    <div class="pl-8 pr-6 py-6 hover:translate-x-2 transition-transform duration-300">
+                        <div class="flex items-baseline gap-4 mb-3">
+                            <span class="text-5xl font-bold text-lavande-primaire/20">04</span>
+                            <h3 class="text-2xl font-bold text-gris-fonce-texte">Volleyball</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-3 pl-20">
+                            Sport collectif qui développe esprit d'équipe et coordination. Combine stratégie, rapidité et plaisir du jeu entre loisir et performance.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pl-20">
+                            <span class="text-xs text-lavande-primaire font-medium">Équipe</span>
+                            <span class="text-xs text-gray-400">•</span>
+                            <span class="text-xs text-lavande-primaire font-medium">Rapidité</span>
+                            <span class="text-xs text-gray-400">•</span>
+                            <span class="text-xs text-lavande-primaire font-medium">Stratégie</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-blanc-propre">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-4xl font-extrabold text-center text-gris-fonce-texte mb-12 reveal">
+                Me Contacter
+            </h2>
+
+            <!-- Onglets -->
+            <div class="flex border-b border-gris-clair-bordure mb-8">
+                <button onclick="showTab('formulaire')" class="tab-button active flex-1 py-4 text-center font-semibold text-gris-fonce-texte border-b-2 border-lavande-primaire transition duration-300 hover:text-lavande-primaire">
+                    Formulaire
+                </button>
+                <button onclick="showTab('contact')" class="tab-button flex-1 py-4 text-center font-semibold text-gray-500 border-b-2 border-transparent transition duration-300 hover:text-lavande-primaire">
+                    Infos de Contact
+                </button>
+            </div>
+
+            <!-- Contenu des onglets -->
+            <div class="tab-content active" id="tab-formulaire">
+                <div class="p-8 bg-white rounded-xl shadow-lg border border-gris-clair-bordure/50">
+                    <form id="contact-form" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gris-fonce-texte mb-2">Nom complet</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full border border-gris-clair-bordure rounded-lg shadow-sm p-3 focus:ring-2 focus:ring-lavande-primaire focus:border-transparent transition duration-200">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gris-fonce-texte mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full border border-gris-clair-bordure rounded-lg shadow-sm p-3 focus:ring-2 focus:ring-lavande-primaire focus:border-transparent transition duration-200">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gris-fonce-texte mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                    class="w-full border border-gris-clair-bordure rounded-lg shadow-sm p-3 focus:ring-2 focus:ring-lavande-primaire focus:border-transparent transition duration-200 resize-none"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full px-6 py-3 text-white font-semibold rounded-lg 
+                                    bg-lavande-primaire hover:bg-lavande-primaire/90 
+                                    transition duration-300 shadow-md hover:shadow-lg">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="tab-contact">
+                <div class="space-y-4">
+                    
+                    <!-- Email -->
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-lavande-primaire hover:shadow-lg transition duration-300">
+                        <h3 class="text-lg font-semibold text-gris-fonce-texte mb-2">📧 Email Professionnel</h3>
+                        <p class="text-gray-600 mb-3">Mon email principal pour les demandes professionnelles et collaborations</p>
+                        <a href="mailto:alexandre.dalaroy@gmail.com" class="inline-flex items-center text-lavande-primaire font-semibold hover:text-lavande-primaire/80 transition duration-200">
+                            alexandre.dalaroy@gmail.com
+                            <span class="ml-2">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-lavande-primaire hover:shadow-lg transition duration-300">
+                        <h3 class="text-lg font-semibold text-gris-fonce-texte mb-2">☎️ Téléphone</h3>
+                        <p class="text-gray-600 mb-3">Disponible pour une discussion directe</p>
+                        <a href="tel:+330783632808" class="inline-flex items-center text-lavande-primaire font-semibold hover:text-lavande-primaire/80 transition duration-200">
+                            +33 7 83 63 28 08
+                            <span class="ml-2">→</span>
+                        </a>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-lavande-primaire hover:shadow-lg transition duration-300">
+                        <h3 class="text-lg font-semibold text-gris-fonce-texte mb-2">💼 LinkedIn</h3>
+                        <p class="text-gray-600 mb-3">Visitez mon profil pour plus d'informations sur mon parcours</p>
+                        <a href="https://www.linkedin.com/in/alexandre-dalaroy-66752732a" target="_blank" class="inline-flex items-center text-lavande-primaire font-semibold hover:text-lavande-primaire/80 transition duration-200">
+                            Voir mon profil
+                            <span class="ml-2">→</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        .tab-button {
+            position: relative;
+        }
+        
+        .tab-button.active {
+            color: #333333;
+            border-bottom-color: #8968cd;
+        }
+        
+        .tab-content {
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .tab-content.hidden {
+            display: none;
+        }
+    </style>
+
+    <style>
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Typed cursor */
+        #typed-text::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        /* 3D Tilt Effect */
+        [style*="perspective"] {
+            transition: transform 0.1s ease-out, box-shadow 0.3s ease-out;
+            transform-style: preserve-3d;
+        }
+
+        [style*="perspective"]:hover {
+            box-shadow: 0 25px 50px -12px rgba(137, 104, 205, 0.3);
+        }
+
+        /* Back to Top Button Animation */
+        #backToTop {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        #backToTop.show {
+            opacity: 1;
+            pointer-events: auto;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Counter Animation */
+        .counter {
+            display: inline-block;
+            transition: all 0.3s ease-out;
+        }
+
+        /* Dark Mode Styles */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9f9f9;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --border-color: #eaeaea;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        html.dark-mode {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --border-color: #404040;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
+        html.dark-mode body,
+        html.dark-mode section {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        html.dark-mode header {
+            background-color: var(--bg-secondary) !important;
+        }
+
+        html.dark-mode .bg-blanc-propre {
+            background-color: var(--bg-primary);
+        }
+
+        html.dark-mode .bg-white {
+            background-color: var(--bg-secondary);
+        }
+
+        html.dark-mode .text-gris-fonce-texte {
+            color: var(--text-primary);
+        }
+
+        html.dark-mode .text-gray-600 {
+            color: var(--text-secondary);
+        }
+
+        html.dark-mode .border-gris-clair-bordure {
+            border-color: var(--border-color);
+        }
+
+        html.dark-mode .shadow-md,
+        html.dark-mode .shadow-lg,
+        html.dark-mode .shadow-2xl {
+            box-shadow: 0 4px 6px var(--shadow-color) !important;
+        }
+
+        html.dark-mode .bg-gradient-to-r {
+            background: linear-gradient(90deg, rgba(137, 104, 205, 0.1), rgba(137, 104, 205, 0.05));
+        }
+
+        html.dark-mode .bg-gray-50,
+        html.dark-mode .bg-gray-100 {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        html.dark-mode footer {
+            background-color: #0f0f0f;
+        }
+
+        /* Nav Active Highlight */
+        .nav-link {
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #8968cd;
+            transition: width 0.3s ease-out;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: #8968cd;
+        }
+
+        html.dark-mode .nav-link.active {
+            color: #b99dd9;
+        }
+    </style>
+
+<!-- Bouton Back to Top -->
+<button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-lavande-primaire text-white rounded-full shadow-lg hover:shadow-xl hover:bg-lavande-primaire/90 transition duration-300 opacity-0 pointer-events-none flex items-center justify-center z-40" title="Retour en haut">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7-7m0 0L5 14m7-7v12"></path></svg>
+</button>
+
+<footer class="bg-gris-fonce-texte py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm text-gray-400">
+            &copy; 2025 Alexandre Dalaroy
+        </p>
+    </div>
+</footer>
+
+<script src="./src/js/main.js"></script>
+</body>
+</html>
